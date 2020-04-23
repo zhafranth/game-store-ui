@@ -29,11 +29,9 @@
   border-radius: 20px;
   text-align: center;
   background: rgb(17, 29, 94);
-  background: linear-gradient(
-    152deg,
-    rgba(17, 29, 94, 1) 30%,
-    rgba(189, 107, 190, 1) 100%
-  );
+  background: linear-gradient(152deg,
+      rgba(17, 29, 94, 1) 30%,
+      rgba(189, 107, 190, 1) 100%);
   color: white;
   margin-bottom: 30px;
 }
@@ -115,7 +113,7 @@ button .icon {
   margin-top: 0;
 }
 
-.kanan h3 > span {
+.kanan h3>span {
   color: #ffbd69;
 }
 
@@ -154,6 +152,7 @@ button .icon {
   background-color: #ffbd69;
   box-shadow: 1px 3px 18px -5px rgba(0, 0, 0, 0.75);
 }
+
 .catgory-item:hover {
   background-color: #ffd9a7;
 }
@@ -180,6 +179,7 @@ button .icon {
   grid-template-rows: 2fr 2fr;
   gap: 20px 20px;
 }
+
 .game-item {
   display: flex;
   align-items: center;
@@ -205,10 +205,12 @@ button .icon {
   display: block;
   margin-left: 10%;
 }
+
 .game-konten h3 {
   margin: 0;
   font-size: 20px;
 }
+
 .game-konten span {
   color: #d32d57;
 }
