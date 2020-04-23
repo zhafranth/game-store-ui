@@ -1,38 +1,234 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  color: rgb(0, 0, 0);
+  background-color: rgb(232, 234, 240);
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.kiri {
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  border-radius: 30px;
+  padding: 25px;
+}
+
+.kanan {
+  width: 77%;
+  height: 100%;
+  border-radius: 30px;
+  /* padding: 20px; */
+}
+
+/* Profil */
+.profil {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgb(17, 29, 94);
+  background: linear-gradient(
+    152deg,
+    rgba(17, 29, 94, 1) 30%,
+    rgba(189, 107, 190, 1) 100%
+  );
   color: white;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.profil-images {
+  margin-top: 50px;
+  width: 35%;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profil h6 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/* Sidebar */
+.sidebar {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  padding-left: 15px;
+}
+
+.sidebar button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(194, 203, 212);
+  font-size: 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin: 40px 0;
+
+  color: rgb(194, 203, 212);
+}
+
+button.btn-active {
+  color: #131e5e;
+  font-weight: 700;
+}
+
+button .icon {
+  margin-right: 20px;
+}
+
+.sidebar ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar ul li:first-child {
+  margin-top: 0;
+}
+
+/* Premium */
+.premium {
+  margin-top: 30px;
+  width: 100%;
+  height: 90px;
+  background-color: #ffbd69;
+  color: #131e5e;
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 15px;
+  font-weight: 700;
+}
+
+/* Kanan */
+.kanan h3 {
+  text-align: center;
+  color: #131e5e;
+  margin-top: 0;
+}
+
+.kanan h3 > span {
+  color: #ffbd69;
+}
+
+/* Catgory */
+.catgory {
+  margin-bottom: 20px;
+}
+
+.catgory h5 {
+  font-size: 20px;
+  color: #131e5e;
+  margin-bottom: 10px;
+}
+
+.catgory-container {
+  width: 90%;
+  height: auto;
+  /* background-color: rgb(141, 141, 141); */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catgory-item {
+  width: 15%;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.catgory-item.catgory-active {
+  background-color: #ffbd69;
+  box-shadow: 1px 3px 18px -5px rgba(0, 0, 0, 0.75);
+}
+.catgory-item:hover {
+  background-color: #ffd9a7;
+}
+
+.catgory-item img {
+  width: 50%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.catgory-item h6 {
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+
+/* Games */
+.catgory-game {
+  width: 90%;
+  height: auto;
+  /* background-color: rgb(141, 141, 141); */
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 2fr 2fr;
+  gap: 20px 20px;
+}
+.game-item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.game-item:hover {
+  transform: scale(1.05);
+}
+
+.game-item img {
+  width: 80px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.game-konten {
+  display: block;
+  margin-left: 10%;
+}
+.game-konten h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.game-konten span {
+  color: #d32d57;
+}
+
+.game-item .play-btn {
+  background-color: #f1f1f1;
+  border-radius: 100px;
+  padding: 20px;
+  position: absolute;
+  right: 10%;
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 1px 3px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.play-btn:hover {
+  background-color: #ffbd69;
+  box-shadow: none;
+}
+
+.game-item .play-btn span {
+  color: #131e5e;
 }

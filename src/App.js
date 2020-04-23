@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Profil from "./assets/profil.png";
+import Sidebar from "./component/Sidebar";
+import Category from "./component/Category";
+import Games from "./component/Games";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="kiri">
+        <div className="profil">
+          <img src={Profil} alt="profil" className="profil-images" />
+          <h6>John Doe</h6>
+        </div>
+        <Sidebar />
+        <div className="premium">
+          Go <br /> Premium
+        </div>
+      </div>
+      <div className="kanan">
+        <h3>
+          Game <span>Store</span>
+        </h3>
+        <Category />
+        <Games />
+      </div>
     </div>
   );
 }
