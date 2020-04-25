@@ -1,45 +1,33 @@
 import React, { Component } from "react";
-import Action from "../assets/action.png";
-import Adventure from "../assets/adventure.png";
-import Racing from "../assets/driving.png";
-import Simulation from "../assets/race.png";
-import Sport from "../assets/sport.png";
+import { RoomContext } from "../Context";
 import CategoryItem from "./CategoryItem";
 
 export default class Category extends Component {
-  state = {
-    genre: [
-      { name: "action", gambar: Action, id: 1 },
-      { name: "adventure", gambar: Adventure, id: 2 },
-      { name: "racing", gambar: Racing, id: 3 },
-      { name: "simulation", gambar: Simulation, id: 4 },
-      { name: "sport", gambar: Sport, id: 5 },
-    ],
-    active: null,
-  };
+  static contextType = RoomContext;
 
-  activeHandle = (id) => {
-    this.setState({ active: id });
-    console.log(this.state.active);
-  };
+  // activeHandle = (id, name) => {
+  //   this.setState({ active: id, nameActive: name });
+  //   console.log(name);
+  // };
 
   render() {
-    const { genre, active } = this.state;
+    let { buttonData, activeHandle, active } = this.context;
+    // console.log(buttonData);
     return (
       <div className="catgory">
         <h5>Catgories</h5>
         <div className="catgory-container">
-          {genre.map((item) => {
+          {buttonData.map((item) => {
             return (
               <CategoryItem
                 key={item.id}
-                clicked={() => this.activeHandle(item.id)}
+                clicked={() => activeHandle(item.id, item.name)}
                 activated={
                   item.id === active
                     ? "catgory-item catgory-active"
                     : "catgory-item"
                 }
-                image={item.gambar}
+                image={item.image}
                 name={item.name}
               />
             );
