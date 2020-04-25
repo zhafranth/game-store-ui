@@ -78,7 +78,7 @@ export default [
     },
     fields: {
       name: "Assasin Creed Odyssey",
-      type: "advanture",
+      type: "adventure",
       desc:
         "Choose your fate in Assassin's Creed® Odyssey. From outcast to living legend, embark on an odyssey to uncover the secrets of your past and change the fate of Ancient Greece.",
       publisher: "Ubisoft",
@@ -91,7 +91,7 @@ export default [
     },
     fields: {
       name: "GTA V",
-      type: "advanture",
+      type: "adventure",
       desc:
         "Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.",
       publisher: "Rokstar Games",
@@ -104,7 +104,7 @@ export default [
     },
     fields: {
       name: "Red Dead Redemption 2",
-      type: "advanture",
+      type: "adventure",
       desc:
         "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.",
       publisher: "Rokstar Games",
@@ -117,7 +117,7 @@ export default [
     },
     fields: {
       name: "The Witcher 3",
-      type: "advanture",
+      type: "adventure",
       desc:
         "As war rages on throughout the Northern Realms, you take on the greatest contract of your life — tracking down the Child of Prophecy, a living weapon that can alter the shape of the world.",
       publisher: "CD PROJEKT RED",
@@ -182,7 +182,7 @@ export default [
     },
     fields: {
       name: "Euro Truck Simulator 2",
-      type: "simulator",
+      type: "simulation",
       desc:
         "Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore, your endurance, skill and speed will all be pushed to their limits.",
       publisher: "SCS Software",
@@ -195,7 +195,7 @@ export default [
     },
     fields: {
       name: "Football Manager 2020",
-      type: "simulator",
+      type: "simulation",
       desc:
         "Run your football club, your way. Every decision counts in Football Manager 2020 with new features and polished game mechanics rewarding planning and progression like never before, empowering managers to develop and refine both your club’s and your own unique identity.",
       publisher: "SEGA",
@@ -208,7 +208,7 @@ export default [
     },
     fields: {
       name: "House Flipper",
-      type: "simulator",
+      type: "simulation",
       desc:
         "House Flipper is a unique chance to become a one-man renovation crew. Buy, repair and remodel devastated houses. Give them a second life and sell them at a profit!.",
       publisher: "Frozen District",
@@ -221,7 +221,7 @@ export default [
     },
     fields: {
       name: "Planet Zoo",
-      type: "simulator",
+      type: "simulation",
       desc:
         "Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim. Construct detailed habitats, manage your zoo, and meet authentic living animals who think, feel and explore the world you create around them.",
       publisher: "Frontier Developments",

@@ -5,19 +5,21 @@ import { RoomContext } from "../Context";
 export default class Games extends Component {
   static contextType = RoomContext;
   render() {
-    let { gameItem, nameActive, changeHandle } = this.context;
+    let { gameItem, nameActive } = this.context;
     let tempGameItem = [...gameItem];
-    let temp = tempGameItem.map((item) => item.type === nameActive);
-    // temp = temp.map((item) => {
-    //   return (
-    //     <GameItem
-    //       image={item.image}
-    //       name={item.name}
-    //       developer={item.publisher}
-    //       key={item.id}
-    //     />
-    //   );
-    // });
+    let temp = tempGameItem.filter((item) => {
+      return item.type === nameActive;
+    });
+    temp = temp.map((item) => {
+      return (
+        <GameItem
+          image={item.image}
+          name={item.name}
+          developer={item.publisher}
+          key={item.id}
+        />
+      );
+    });
     console.log(temp);
     return (
       <div className="catgory">
