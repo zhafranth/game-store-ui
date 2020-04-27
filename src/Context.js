@@ -10,7 +10,10 @@ class RoomProvider extends Component {
     buttonData: [],
     tempData: [],
     active: null,
-    nameActive: null,
+    nameActive: "action",
+    showModal: false,
+    idModal: null,
+    valueModal: null,
   };
   // GetData
   componentDidMount() {
@@ -40,17 +43,33 @@ class RoomProvider extends Component {
   // End GetData
 
   activeHandle = (id, name) => {
-    this.setState({ active: id, nameActive: name });
-    // console.log(name);
+    this.setState({
+      active: id,
+      nameActive: name,
+    });
+    console.log(this.state.nameActive);
   };
 
-  changeHandle = () => {
-    let { gameItem, nameActive } = this.state;
-    let tempGameItem = [...gameItem];
-    if (nameActive !== null) {
-      tempGameItem = tempGameItem.filter((item) => item.type === nameActive);
-    }
-    this.setState({ tempData: tempGameItem });
+  activeGameItem = (event) => {
+    const target = event.currentTarget;
+    console.log(target);
+    console.log("cliked");
+  };
+
+  activeModal = (id, e) => {
+    const target = e.target.value;
+    this.setState({
+      idModal: id,
+      valueModal: target,
+      showModal: true,
+    });
+    console.log(this.state.valueModal);
+  };
+
+  hideModal = (id, e) => {
+    const target = e.target.value;
+    this.setState({ idModal: id, valueModa: target, showModal: false });
+    // console.log("click");
   };
 
   render() {
@@ -60,7 +79,9 @@ class RoomProvider extends Component {
         value={{
           ...this.state,
           activeHandle: this.activeHandle,
-          changeHandle: this.changeHandle,
+          activeGameItem: this.activeGameItem,
+          activeModal: this.activeModal,
+          hideModal: this.hideModal,
         }}
       >
         {this.props.children}

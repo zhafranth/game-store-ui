@@ -126,6 +126,7 @@ button .icon {
   font-size: 20px;
   color: #131e5e;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .catgory-container {
@@ -203,16 +204,18 @@ button .icon {
 
 .game-konten {
   display: block;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
-.game-konten h3 {
+.game-konten h4 {
   margin: 0;
   font-size: 20px;
+  color: #131e5e;
 }
 
 .game-konten span {
   color: #d32d57;
+  font-size: 15px;
 }
 
 .game-item .play-btn {
@@ -224,6 +227,8 @@ button .icon {
   cursor: pointer;
   transition: 1s;
   box-shadow: 1px 3px 15px -10px rgba(0, 0, 0, 0.75);
+  outline: none;
+  border: none;
 }
 
 .play-btn:hover {
@@ -233,4 +238,36 @@ button .icon {
 
 .game-item .play-btn span {
   color: #131e5e;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.11);
+
+}
+
+.modal-main {
+  position: fixed;
+  padding: 20px;
+  background: white;
+  width: 50%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.display-block {
+  display: block;
+  z-index: 100;
+}
+
+.display-none {
+  display: none;
 }

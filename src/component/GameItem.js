@@ -1,16 +1,27 @@
 import React from "react";
 
-export default function GameItem({ image, name, developer }) {
+export default function GameItem({
+  image,
+  name,
+  developer,
+  clicked,
+  id,
+  activeModal,
+  hideModal,
+  showModal,
+  titleModal,
+  clickButtonModal,
+}) {
   return (
     <div className="game-item">
       <img src={image} alt="" />
       <div className="game-konten">
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         <span>{developer}</span>
       </div>
-      <div className="play-btn">
-        <span>Go</span>
-      </div>
+      <button className="play-btn" onClick={clickButtonModal} value={id}>
+        Go
+      </button>
     </div>
   );
 }
