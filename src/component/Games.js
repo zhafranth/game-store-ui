@@ -37,6 +37,9 @@ export default class Games extends Component {
             id={item.id}
             title={item.name}
             description={item.desc}
+            modalImage={item.image}
+            publisherModal={item.publisher}
+            genreModal={nameActive}
           />
         </>
       );
